@@ -6,13 +6,13 @@ public class ShiftArrays {
         
         if (condition) {
             for (int i = 0; i < A.length - 1; i++) {
-                A[i] = A[i] << 1; // Left shift A[i] by 1
-                B[i] = B[i] >> 1; // Right shift B[i] by 1
+                A[i] = A[i] << 1; 
+                B[i] = B[i] >> 1; 
             }
         } else {
             for (int i = 0; i < A.length - 1; i++) {
-                A[i] = A[i] >> 1; // Right shift A[i] by 1
-                B[i] = B[i] << 1; // Left shift B[i] by 1
+                A[i] = A[i] >> 1; 
+                B[i] = B[i] << 1;
             }
         }
         System.out.println("Shifted array A:");
