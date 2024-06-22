@@ -1,34 +1,30 @@
-public class ShortestLoopPath {
-    public static void main(String args[]) {
-        String shortestPath = "for"; 
-        int[] arr = {1, 2, 3, 4, 5};
-        int i = 0;
-        switch (shortestPath) {
-            case "for":
-                for (i = 0; i < arr.length; i++) {
-                    System.out.print(arr[i] + " ");
-                }
-                break;
+import java.util.Scanner;
 
-            case "while":
-                i = 0;
-                while (i < arr.length) {
-                    System.out.print(arr[i] + " ");
-                    i++;
-                }
-                break;
-            case "do-while":
-                i = 0;
-                do {
-                    System.out.print(arr[i] + " ");
-                    i++;
-                } while (i < arr.length);
-                break;
+public class LuckyGuess {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Welcome to the Lucky Guess game!");
+        System.out.println("Guess a number between 1 and 5:");
 
+        int luckyNumber = 3; // You can change this to any number between 1 and 5
+
+        int userGuess = scanner.nextInt();
+
+        switch (userGuess) {
+            case 1:
+            case 2:
+            case 4:
+            case 5:
+                System.out.println("Sorry, try again! Your guess is not lucky.");
+                break;
+            case 3:
+                System.out.println("Congratulations! Your guess is lucky!");
+                break;
             default:
-                System.out.println("Invalid loop type specified.");
+                System.out.println("Invalid guess. Please enter a number between 1 and 5.");
         }
 
-        System.out.println("\nShortest loop path is: " + shortestPath);
+        scanner.close();
     }
 }
